@@ -5,30 +5,8 @@ import os
 
 app = Flask(__name__)
 
-# 导入完整的648个单词数据
-WORD_DATA = [
-    {'word': 'access point', 'chinese': '存取点；接入点', 'phonetic': ''},
-    {'word': 'access time', 'chinese': '访问时间', 'phonetic': ''},
-    {'word': 'accounting information system', 'chinese': '会计信息系统', 'phonetic': ''},
-    {'word': 'Acer', 'chinese': '宏碁(一个知名的计算机品牌)', 'phonetic': ''},
-    {'word': 'act', 'chinese': '法案', 'phonetic': '[ækt]'},
-    {'word': 'administrator', 'chinese': '管理员；监督人；行政官', 'phonetic': '[əd‘mɪnɪstreɪtə]'},
-    {'word': 'ADSL', 'chinese': '不对称数字用户线(英文缩写)', 'phonetic': ''},
-    {'word': 'adware', 'chinese': '广告软件', 'phonetic': ''},
-    {'word': 'agent', 'chinese': '代理人；代理商', 'phonetic': '[’edʒənt]'},
-    {'word': 'AI', 'chinese': '人工智能(英文缩写)', 'phonetic': ''},
-    {'word': 'algorithm', 'chinese': '算法', 'phonetic': '[’ælɡəˌrɪðəm]'},
-    {'word': 'all rights reserved', 'chinese': '版权所有；保留所有权利', 'phonetic': ''},
-    {'word': 'ALU', 'chinese': '算术逻辑单元(英文缩写)', 'phonetic': ''},
-    {'word': 'analog', 'chinese': '模拟；类似物', 'phonetic': '[’ænəlɔːg]'},
-    {'word': 'analysis', 'chinese': '分析', 'phonetic': '[ə’næləsɪs]'},
-    {'word': 'Android', 'chinese': '安卓(一种手机操作系统)', 'phonetic': ''},
-    {'word': 'ANSI', 'chinese': '美国国家标准协会(英文缩写)', 'phonetic': ''},
-    {'word': 'antivirus', 'chinese': '防病毒的', 'phonetic': '[’æntivɑɪrəs]'},
-    {'word': 'antivirus software', 'chinese': '防病毒软件', 'phonetic': ''},
-    {'word': 'Apple', 'chinese': '苹果(一个知名的手机与计算机品牌)', 'phonetic': ''},
-    # 这里只显示前20个单词，实际有648个单词
-]
+# 从word_data.py导入完整的651个单词数据
+from word_data import WORD_DATA
 
 # 分类信息
 CATEGORIES = {
